@@ -1,0 +1,20 @@
+<ul>
+  <li *ngFor="let article of latest_news.articles">
+    <div [ngStyle]="{'margin-bottom': '5px'}">
+      <p *ngIf="article.url">
+        <a class="title" [ngStyle]="{'font-size': '20px'}" href="{{article.url}}" [attr.target]='_blank' [attr.rel]='noopener'>
+          {{article.title}}
+        </a>
+        <span *ngIf="article.author" class="domain">({{article.author}})</span>
+      </p>
+      <div class="subtext-laptop">
+        {{article.description}}
+      </div>
+      <div class="details">
+        {{ article.publishedAt }}
+        <img width="50" height="50" src="https://yt3.ggpht.com/-TzTg3RN8mUQ/AAAAAAAAAAI/AAAAAAAAAAA/5e9M5aM9RZ4/s100-c-k-no-mo-rj-c0xffffff/photo.jpg"/>
+      </div>
+    </div>
+  </li>
+</ul>
+
