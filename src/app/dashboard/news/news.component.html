@@ -1,6 +1,8 @@
-<ul>
-  <li *ngFor="let article of latest_news.articles">
-    <div [ngStyle]="{'margin-bottom': '5px'}">
+<!--
+<ol >
+  <li class="post" *ngFor="let article of latest_news.articles">
+    
+   <!-- <div [ngStyle]="{'margin-bottom': '5px'}">
       <p *ngIf="article.url">
         <a class="title" [ngStyle]="{'font-size': '20px'}" href="{{article.url}}" [attr.target]='_blank' [attr.rel]='noopener'>
           {{article.title}}
@@ -15,6 +17,73 @@
         <img width="50" height="50" src="https://yt3.ggpht.com/-TzTg3RN8mUQ/AAAAAAAAAAI/AAAAAAAAAAA/5e9M5aM9RZ4/s100-c-k-no-mo-rj-c0xffffff/photo.jpg"/>
       </div>
     </div>
-  </li>
-</ul>
+    <div [ngStyle]="{'margin-bottom': '10px'}">
+  <p>
+    <a class="title" [ngStyle]="{'font-size': '15px'}" href="{{article.url}}" [attr.target]="_blank" [attr.rel]="noopener">
+      {{article.title}}
+    </a>
+    <span  class="domain">({{article.author}})</span>
+  </p>
 
+  <div class="subtext-laptop">
+    <span >
+      {{article.description}} 
+     <!-- <a [routerLink]="['/user', item.user]" routerLinkActive="active">{{article.author}}</a>
+    </span>
+   
+  </div>
+  <div  [ngStyle]="{'margin-bottom': '10px'}">
+      
+     <span style="text-align: left">
+      Published on: {{ article.publishedAt}}
+   
+    </span>
+  </div>
+</div>
+
+  </li>
+</ol>-->
+
+
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+    <h4> NFL</h4>
+  </div>
+
+
+  <div class='panel-body'>
+
+    <div class='table-responsive'>
+      <table class='table'>
+        <thead>
+          <tr>
+            <th>
+
+            </th>
+            <th colspan="3">Article</th>
+            <th>Author</th>
+            <th>Published </th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let article of latest_news.articles' style="height: 30px">
+            <td>
+              <img [src]='article.urlToImage' [title]='article.title | uppercase' [style.width.px]='50' [style.margin.px]='5'>
+            </td>
+            <td colspan="3"><a href="{{article.url}}">
+                            {{article.title}}
+                            </a>
+              <p>
+                {{article.description}}
+              </p>
+            </td>
+            <td>{{ article.author | uppercase }}</td>
+            <td>{{ article.publishedAt | timeAgo}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

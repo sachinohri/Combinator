@@ -1,4 +1,11 @@
-.body-cover {
+li {
+    font-size: large;
+}
+
+div.panel-heading {
+   font-size: x-large; 
+}
+/*.body-cover {
   width: 100%;
   z-index: 0;
   position: fixed;
@@ -19,4 +26,4 @@
   .wrapper {
     width: 100%;
   }
-}
+}*/
