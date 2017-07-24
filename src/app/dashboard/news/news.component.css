@@ -1,4 +1,14 @@
-p {
+thead {
+    color: #337AB7;
+}
+.panel-primary{
+  border-color: #87396b;
+}
+.panel-heading{
+  background-color: #87396b;
+  border-color: #87396b;
+}
+/*p {
   margin: 2px 0;
 }
 @media screen and (max-width: 768px) {
@@ -60,3 +70,4 @@ a {
 .item-details {
   padding: 10px;
 }
+*/

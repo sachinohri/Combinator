@@ -1,4 +1,4 @@
-html {
+/*html {
   height: 100%;
   width: 100%;
 }
@@ -39,3 +39,4 @@ app-root:empty + .app-loader {
 app-root:empty + .app-loader .logo {
   width: 20vh;
 }
+*/
